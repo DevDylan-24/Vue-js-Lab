@@ -1,0 +1,44 @@
+#lesson-photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    border-color: rgb(rgb(180, 66, 66), rgb(94, 145, 94), rgb(117, 117, 138));
+    border-width: 20px;
+}
+
+#add-to-cart-button{
+    background-color: rgb(53, 115, 207);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+header button{
+    background-color: rgb(53, 115, 207);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+#CheckoutCard{
+    border: 2px solid black;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    background-color: white;
+    z-index: 1;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
