@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script> 
+    <title>Pet Store</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="webstore">
+       <h1 style="text-align: center;"> {{message}} </h1>
+       <header>
+        <button id="" @click="displayCheckout"><span><i class="fa-solid fa-cart-shopping"></i></span> Checkout {{ cartItemCount}}</button>
+       </header>
+        
+       <main>
+        <figure>
+            <div id="" v-if="showCheckout">
+                <h2>Welcome to the Checkout Page</h2>
+                <p>Your total is Rs {{ TotalPrice }}</p>
+                <p v-if="cart.length === 0">Your cart is empty</p>
+                <ul v-else>
+                    <li v-for="item in cart" :key="item">Product ID: {{item}}</li>
+                </ul>
+            </div>
+            <div v-else style="text-align: center;">
+                 <img v-bind:src="product.image" alt="Cat Image">
+                <h2 v-text="product.title" ></h2>
+                <p v-text="product.id"> </p>
+                <p v-text="product.description"></p>
+                <p>Price: {{product.price}} </p>
+                <button @click="addToCart" id="add-to-cart-button">Add to cart</button>
+
+            </div>
+         
+        </figure>
+       </main>
+         <div>
+    </div>
+<script>
+    let webstore = new Vue({
+        el: '#webstore',
+        data:{
+            message: 'Welcome to my Pet Store !!!!',
+            product:{
+                id: 1001,
+                title:'Cat Food 25 lb bag',
+                description:'Irresistible cat food for your cat',
+                price:2000,
+                image:'images/product-fullsize.png',
+                inventory: 10
+            },
+            cart:[],
+            showCheckout: false
+        },
+        methods: {
+            addToCart(){
+                if(this.product.inventory === 0){
+                    alert("out of stock");
+                }else{
+                    this.cart.push(this.product.id);
+                    this.product.inventory--;
+                    console.log(this.cart);
+                }
+
+            },
+            displayCheckout(){
+                this.showCheckout = !this.showCheckout;
+               
+            },
+            
+        },
+        computed:{
+            cartItemCount(){
+                return this.cart.length;
+            },
+            TotalPrice(){
+                return (this.cart.length * this.product.price).toFixed(2);
+            }
+        }
+    });
+</script> 
+</body>
+</html>
