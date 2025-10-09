@@ -7,7 +7,7 @@ let products = [
         description:"Irresisitible cat food for your cat",
         price: 20.00,
         image: "images/product-fullsize.png",
-        availableInventory: 3,
+        inventory: 3,
         rating:3
     },
     {
@@ -16,7 +16,7 @@ let products = [
         description:"Irresisitible cat House for your cat",
         price: 2000,
         image: "images/cat-house.jpg",
-        availableInventory: 5,
+        inventory: 5,
         rating:4
     },
     {
@@ -24,7 +24,7 @@ let products = [
         title:"Cat Litter",
         price: 1000,
         image: "images/cat-litter.jpg",
-        availableInventory: 9,
+        inventory: 9,
         rating:5
     },
     {
@@ -33,7 +33,7 @@ let products = [
         description:"Irresisitible laser pointer for your cat",
         price: 25.99,
         image: "images/laser-pointer.jpg",
-        availableInventory: 9,
+        inventory: 9,
         rating:4
     },
     {
@@ -42,7 +42,7 @@ let products = [
         description:"Irresisitible cat toy for your cat",
         price: 3.99,
         image: "images/Mindy_Mouse_cat_toy.jpg",
-        availableInventory: 5,
+        inventory: 5,
         rating:3
     },
     {
@@ -51,7 +51,7 @@ let products = [
         description:"Irresisitible cat yarn for your cat",
         price: 2.99,
         image: "images/yarn.jpg",
-        availableInventory: 3,
+        inventory: 3,
         rating:2
     },
 

@@ -114,3 +114,76 @@ header button{
     margin-top: 6px;
     margin-bottom: 14px;
 }
+
+/* Product card styles */
+#webstore > main figure > div{
+    max-width: 420px;
+    margin: 18px auto;
+    padding: 18px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+    box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+    border: 1px solid rgba(16,24,40,0.04);
+    text-align: center;
+}
+
+#product-image{
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(16,24,40,0.04);
+}
+
+#webstore > main figure > div h2{
+    margin: 8px 0 6px 0;
+    font-size: 1.35rem;
+    color: #0f172a;
+}
+
+#webstore > main figure > div p{
+    margin: 6px 0;
+    color: #334155;
+}
+
+#webstore > main figure > div p:nth-of-type(4){
+    font-weight: 600;
+    color: #0b4fd6;
+}
+
+/* Availability badges */
+#webstore > main figure > div span{
+    display: inline-block;
+    margin: 8px 6px 0 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+
+#webstore > main figure > div span:first-of-type{
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+#webstore > main figure > div span:nth-of-type(2){
+    background: #fff7ed;
+    color: #92400e;
+}
+
+/* Star ratings */
+#webstore > main figure > div > div span{
+    color: #f59e0b;
+    font-size: 1.05rem;
+    margin-right: 2px;
+}
+
+@media (min-width: 900px){
+    #webstore > main figure > div{
+        max-width: 520px;
+        padding: 22px;
+    }
+}
+
